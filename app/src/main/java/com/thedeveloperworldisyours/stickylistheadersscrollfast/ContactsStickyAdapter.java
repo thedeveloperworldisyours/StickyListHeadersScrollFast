@@ -62,13 +62,13 @@ public class ContactsStickyAdapter extends BaseAdapter implements StickyListHead
         HeaderViewHolder holder;
         if (convertView == null) {
             holder = new HeaderViewHolder();
-            convertView = inflater.inflate(R.layout.header_contacts, parent, false);
+            convertView = inflater.inflate(R.layout.header, parent, false);
             holder.text = (TextView) convertView.findViewById(R.id.header_text);
             convertView.setTag(holder);
         } else {
             holder = (HeaderViewHolder) convertView.getTag();
         }
-        //set header_contacts text as first char in name
+        //set header text as first char in name
         String headerText = "" + countries[position].subSequence(0, 1).charAt(0);
         holder.text.setText(headerText);
 
@@ -102,7 +102,7 @@ public class ContactsStickyAdapter extends BaseAdapter implements StickyListHead
 
         if (convertView == null) {
             holder = new ViewHolder();
-            convertView = inflater.inflate(R.layout.list_item_contacts, parent, false);
+            convertView = inflater.inflate(R.layout.list_item, parent, false);
             holder.text = (TextView) convertView.findViewById(R.id.list_item_contacts_name);
             convertView.setTag(holder);
         } else {

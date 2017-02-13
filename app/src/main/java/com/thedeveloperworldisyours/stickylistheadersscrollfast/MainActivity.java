@@ -14,9 +14,10 @@ public class MainActivity extends AppCompatActivity {
 
         StickyListHeadersListView stickyList = (StickyListHeadersListView) findViewById(R.id.main_activity_list_view);
 
+        //very import
         stickyList.setFastScrollEnabled(true);
         ContactsStickyAdapter adapter = new ContactsStickyAdapter(this);
         stickyList.setAdapter(adapter);
-        stickyList.setDivider(null);
+//        stickyList.setDivider(null);
     }
 }
